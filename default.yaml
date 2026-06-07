@@ -1,0 +1,36 @@
+# ─────────────────────────────────────────────────────────────
+# Multi-Asset Risk–Return Analysis — Default Configuration
+# ─────────────────────────────────────────────────────────────
+# All settings here can be overridden by passing --config <path>
+# to the CLI or by creating a custom YAML file.
+
+# ── Asset universe ────────────────────────────────────────────
+tickers:
+  - "^GSPC"   # S&P 500 Index (benchmark)
+  - "AAPL"    # Apple Inc.
+  - "TSLA"    # Tesla Inc.
+  - "JPM"     # JPMorgan Chase
+  - "SPY"     # SPDR S&P 500 ETF
+  - "QQQ"     # Invesco Nasdaq-100 ETF
+  - "GLD"     # SPDR Gold Shares ETF
+  - "GC=F"    # Gold Futures
+  - "CL=F"    # Crude Oil WTI Futures
+
+benchmark: "^GSPC"
+
+# ── Analysis window ───────────────────────────────────────────
+start: "2022-03-01"
+end:   "2025-03-31"
+
+# ── Financial parameters ──────────────────────────────────────
+risk_free_rate:   0.0    # Annualized. Set to 0.04 for US T-bill rate.
+confidence_level: 0.95   # For VaR / CVaR calculation.
+
+# ── Data quality thresholds ───────────────────────────────────
+max_missing_pct:   0.02  # Max fraction of NaN allowed per series.
+min_observations:  120   # Min trading days required per series.
+
+# ── Output ───────────────────────────────────────────────────
+output_dir:   "reports"
+cache_dir:    ".cache"
+report_title: "Multi-Asset Risk–Return Analysis | Mar 2022 – Mar 2025"
