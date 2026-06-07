@@ -19,7 +19,7 @@ import pandas as pd
 from matplotlib.colors import TwoSlopeNorm
 from matplotlib.figure import Figure
 
-from calculator import AssetMetrics, drawdown_series
+from src.metrics.calculator import AssetMetrics, drawdown_series
 
 logger = logging.getLogger(__name__)
 

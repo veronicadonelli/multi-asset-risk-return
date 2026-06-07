@@ -20,10 +20,10 @@ from pathlib import Path
 
 import yaml
 
-from provider import DataConfig, MarketDataProvider
-from calculator import RiskReturnCalculator
-from report import export_csv, export_html
-from charts import generate_all_charts
+from src.data.provider import DataConfig, MarketDataProvider
+from src.metrics.calculator import RiskReturnCalculator
+from src.visualization.charts import generate_all_charts
+from src.reporting.report import export_csv, export_html
 
 # ---------------------------------------------------------------------------
 # Logging setup

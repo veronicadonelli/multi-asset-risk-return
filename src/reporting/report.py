@@ -20,7 +20,7 @@ from pathlib import Path
 import pandas as pd
 from matplotlib.figure import Figure
 
-from calculator import AssetMetrics, portfolio_metrics_table
+from src.metrics.calculator import AssetMetrics, portfolio_metrics_table
 
 logger = logging.getLogger(__name__)
 
